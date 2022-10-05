@@ -1,2 +1,4 @@
 #!/bin/bash
-echo "0-current_working_directory README.md 1-listit"
+echo "0-current_working_directory"
+echo "1-listit"
+echo "README.md"
