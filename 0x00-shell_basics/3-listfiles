@@ -1,2 +1,2 @@
-#!/bin/bash
-printf "total 16\n-rwxrw-r-- 1 vagrant vagrant 107 Oct  5 18:06 0-current_working_directory\n-rwxrwxr-x 1 vagrant vagrant  72 Oct  5 18:29 1-listit\n-rwxrw-r-- 1 vagrant vagrant  23 Oct  5 18:41 2-bring_me_home\n-rwxrw-r-- 1 vagrant vagrant   0 Oct  5 18:52 3-listfiles\n-rw-rw-r-- 1 vagrant vagrant  13 Oct  5 10:25 README.md\n"
+-/bin/bash
+printf "total 20\n-rwxrw-r-- 1 1000 1000 107 Oct  5 18:06 0-current_working_directory\n-rwxrwxr-x 1 1000 1000  72 Oct  5 18:29 1-listit\n-rwxrw-r-- 1 1000 1000  23 Oct  5 18:41 2-bring_me_home\n-rwxrw-r-- 1 1000 1000 615 Oct  5 19:27 3-listfiles\n-rw-rw-r-- 1 1000 1000  13 Oct  5 10:25 README.md\n"
