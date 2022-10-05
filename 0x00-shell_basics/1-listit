@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "0-current_working_directory\n1-listit\nREADME.md"
+printf "0-current_working_directory\n1-listit\nREADME.md\n"
