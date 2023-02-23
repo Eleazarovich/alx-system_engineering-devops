@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# This script, 4 bad luck, 8 good luch other "Best School"
+
+count=1
+
+while [ $count -le 10 ]
+do
+	if [ "$count" == 4 ]; then
+		echo "bad luck"
+		(( count++ ))
+	elif [ "$count" == 8 ]; then
+		echo "good luck"
+		(( count++ ))
+	else
+		echo "Best School"
+		(( count++ ))
+	fi
+done
