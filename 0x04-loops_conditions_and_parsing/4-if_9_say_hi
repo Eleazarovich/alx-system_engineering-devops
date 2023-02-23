@@ -1,13 +1,17 @@
 #!/usr/bin/env bash
 # This script displays "Best School" but on th 9th iteration diplays hi also
 
-for i in {1..10}
+count=1
+
+while [ $count -le 10 ]
 do
-	if [ "$i" == 9 ]
+	if [ "$count" == 9 ]
 	then
 		echo "Best School"
 		echo "Hi"
+		(( count++ ))
 	else
 		echo "Best School"
+		(( count++ ))
 	fi
 done
