@@ -5,9 +5,9 @@
 ---
 ## Tasks
 * Mandatory
-- [ ] Task 0
-- [ ] Task 1
-- [ ] Task 2
-- [ ] Task 3
+- [x] Task 0
+- [x] Task 1
+- [x] Task 2
+- [x] Task 3
 * Advanced
-- [ ] Task 4
+- [x] Task 4
