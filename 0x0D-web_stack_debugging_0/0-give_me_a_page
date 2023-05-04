@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#this script gets Apache to run on the container and to return a page containing Hello Holberton when querying the root of it
+sudo touch /var/www/html/index.html
+sudo bash -c "echo 'Hello Holberton' > /var/www/html/index.html"
+sudo service apache2 start
