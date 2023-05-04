@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#configures Nginx server to have a custom 404 page and adds a header
+sudo apt-get -y update && sudo apt-get -y upgrade
+sudo apt-get install -y nginx
+sudo bash -c "echo 'Hello World!'> /var/www/html/index.nginx-debian.html"
+REDIRECT="\\\tlocation \/redirect_me{\n\t\treturn 301 http:\/\/www.youtube.com/watch?v=QH2-TGUlwu4;}"
+sudo sed -i "47i $REDIRECT" /etc/nginx/sites-available/default
+sudo touch /usr/share/nginx/html/404.html
+sudo bash -c "echo Ceci n\'est pas une page > /usr/share/nginx/html/404.html"
+ERROR="\\\terror_page 404 /404.html;\n\tlocation = /404.html {\n\t\troot /usr/share/nginx/html;\n\t\tinternal    ;\n\t}"
+sudo sed -i "49i $ERROR" /etc/nginx/sites-available/default
+header="\\\t\tadd_header X-Served-By $HOSTNAME;"
+sudo sed -i "58i $header" /etc/nginx/sites-available/default
+sudo service nginx restart
