@@ -5,4 +5,4 @@
 ---
 ## Tasks
 * Mandatory
-- [ ] Task 0
+- [x] Task 0
