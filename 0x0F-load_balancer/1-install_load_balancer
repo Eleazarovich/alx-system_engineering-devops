@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Install and configure HAproxy
+sudo apt-get update -y && sudo apt-get upgrade -y
+sudo apt-get install -y haproxy
+
+# Enable HAproxy
+sudo echo 'ENABLED=1' >> etc/default/haproxy
+
+# Edit configuration for servers
+sudo sed -i "$ a\
+\
+frontend load_balancer\n\
+\tbind *:80\n\
+\tdefault_backend myservers\n\
+\n\
+backend myservers\n\
+\tbalance roundrobin\n\
+\tserver 163092-web-01 54.144.43.198 check port 80\n\
+\tserver 163092-web-02 54.160.68.240 check port 80" /etc/haproxy/haproxy.cfg
+
+# Restart HAproxy
+sudo service haproxy restart
