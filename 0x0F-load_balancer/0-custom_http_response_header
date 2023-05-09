@@ -9,6 +9,6 @@ sudo touch /usr/share/nginx/html/404.html
 sudo bash -c "echo Ceci n\'est pas une page > /usr/share/nginx/html/404.html"
 ERROR="\\\terror_page 404 /404.html;\n\tlocation = /404.html {\n\t\troot /usr/share/nginx/html;\n\t\tinternal    ;\n\t}"
 sudo sed -i "49i $ERROR" /etc/nginx/sites-available/default
-header="\\\t\tadd_header X-Served-By $HOSTNAME;"
+header="\\\t\tadd_header X-Served-By \$HOSTNAME;"
 sudo sed -i "58i $header" /etc/nginx/sites-available/default
 sudo service nginx restart
