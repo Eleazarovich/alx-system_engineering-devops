@@ -1,4 +1,4 @@
-#!/usr/env bash
+#!/usr/bin/env bash
 #configures ngnix server to listen on  port 80 and removes nginx pid
 sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 service nginx restart
