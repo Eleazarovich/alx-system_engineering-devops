@@ -1,10 +1,10 @@
-echo "# // PROJECT NAME //
+# 1-debugging_made_short
 
 ---
-* // TITLE //
+* Web stack debugging #1
 ---
 ## Tasks
 * Mandatory
-- [ ] Task 0
+- [x] Task 0
 * Advanced
-- [ ] Task 1
+- [x] Task 1
