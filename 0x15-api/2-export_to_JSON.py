@@ -18,7 +18,7 @@ def main():
     data = {
             user_id: [
                 {
-                    "tasks": title.get("title"),
+                    "task": title.get("title"),
                     "completed": title.get("completed"),
                     "username": username
                 } for title in todos
