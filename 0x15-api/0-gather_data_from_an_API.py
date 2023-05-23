@@ -7,17 +7,24 @@ import requests
 import sys
 
 
-url = "https://jsonplaceholder.typicode.com/"
-user_id = sys.argv[1]
-user = requests.get(f'{url}users/{user_id}').json()
-todos = requests.get(f'{url}todos', params={"userId": user_id}).json()
+def main():
+    """main entry of the program"""
+    url = "https://jsonplaceholder.typicode.com/"
+    user_id = sys.argv[1]
+    user = requests.get(f'{url}users/{user_id}').json()
+    todos = requests.get(f'{url}todos', params={"userId": user_id}).json()
 
-response = []
-for title in todos:
-    if title.get("completed") is True:
-        response.append(title.get("title"))
+    response = []
+    for title in todos:
+        if title.get("completed") is True:
+            response.append(title.get("title"))
 
-print(f"Employee {user.get('name')} is done with tasks({len(response)}/\
+    print(f"Employee {user.get('name')} is done with tasks({len(response)}/\
 {len(todos)}):")
-for i in response:
-    print("\t", i)
+    for i in response:
+        print("\t", i)
+
+
+if __name__ == "__main__":
+    """this code will not execute when imported"""
+    main()
